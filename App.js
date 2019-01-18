@@ -18,16 +18,18 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-import { StackNavigator } from 'react-navigation';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 import Home from './src/screens/Home';
 import AddItem from './src/screens/AddItem';
 import ListItem from './src/screens/ListItem';
 
-const AppNavigator = StackNavigator({
+const AppNavigator = createStackNavigator({
   HomeScreen: { screen: Home },
   AddItemScreen: { screen: AddItem },
   ListItemScreen: { screen: ListItem }
 });
+
+const AppContainer=createAppContainer(AppNavigator);
 
 import { YellowBox } from 'react-native';
 
@@ -69,7 +71,7 @@ export default class App extends Component<Props> {
 
   render(){
     return (
-      <AppNavigator />
+      <AppContainer />
     );
   }
 }

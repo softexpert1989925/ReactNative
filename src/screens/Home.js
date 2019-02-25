@@ -13,13 +13,7 @@ export default class Home extends Component {
     )
   }
 }
-<<<<<<< HEAD
 
-//hhhhh
-=======
-//sdfsdf
-
->>>>>>> dc22a298a7fa2072935957b979f388d6530b7200
 const styles=StyleSheet.create({
    container:{
      flex:1,
